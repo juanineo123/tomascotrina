@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOMÁS COTRINA - Arte y Turismo en Tarapoto</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <a href="#">Tomás Cotrina</a>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#artesania">Artesanía Machay</a></li>
+                <li><a href="#articulos">Artículos</a></li>
+                <li><a href="#resenas">Reseñas</a></li>
+                <li><a href="#libros">Libros</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="portada">
+        <div class="portada-content">
+            <h1>Arte, Cultura y Selva</h1>
+            <p>Explorando la Amazonía a través de la creatividad y el turismo.</p>
+            <a href="#artesania" class="cta-button">Descubre mi Trabajo</a>
+        </div>
+    </section>
+
+    <main>
+        <section id="artesania" class="section-container">
+            <h2>Artesanía Machay</h2>
+            <p class="section-subtitle">Piezas únicas inspiradas en la magia de la selva.</p>
+            <div class="grid-container">
+                <div class="card artesania-card">
+                    <img src="https://images.pexels.com/photos/716107/pexels-photo-716107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Artesanía de cerámica">
+                    <h3>Cerámica Shipibo</h3>
+                    <p>Diseños geométricos que cuentan historias ancestrales. Hecho a mano.</p>
+                    <span class="precio">$45.00</span>
+                    <button class="buy-button">Comprar</button>
+                </div>
+                <div class="card artesania-card">
+                     <img src="https://images.pexels.com/photos/103566/pexels-photo-103566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Tejido artesanal">
+                    <h3>Tejido de Algodón Nativo</h3>
+                    <p>Manta tejida con tintes naturales de la región. Suave y colorida.</p>
+                    <span class="precio">$80.00</span>
+                    <button class="buy-button">Comprar</button>
+                </div>
+                <div class="card artesania-card">
+                     <img src="https://images.pexels.com/photos/265004/pexels-photo-265004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Talla de madera">
+                    <h3>Máscara de Yanchama</h3>
+                    <p>Talla en madera de topa, representando un espíritu protector del bosque.</p>
+                    <span class="precio">$120.00</span>
+                    <button class="buy-button">Comprar</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="additional-sections">
+            <section id="articulos" class="card">
+                <h3><i class="fas fa-feather-alt"></i> Artículos Semanales</h3>
+                <p>Reflexiones sobre turismo sostenible, cultura amazónica y nuevas tendencias.</p>
+                <a href="#" class="section-link">Leer más</a>
+            </section>
+            <section id="resenas" class="card">
+                <h3><i class="fas fa-utensils"></i> Reseñas Gastronómicas</h3>
+                <p>Un viaje por los sabores de Tarapoto y el Perú. Descubre dónde comer.</p>
+                <a href="#" class="section-link">Ver reseñas</a>
+            </section>
+            <section id="libros" class="card">
+                <h3><i class="fas fa-book-open"></i> Mis Libros</h3>
+                <p>Publicaciones y novelas donde la selva es la principal protagonista.</p>
+                <a href="#" class="section-link">Explorar libros</a>
+            </section>
+            <section id="proyectos" class="card">
+                <h3><i class="fas fa-route"></i> Proyectos Turísticos</h3>
+                <p>Consultoría y desarrollo de experiencias turísticas auténticas y responsables.</p>
+                <a href="#" class="section-link">Conocer proyectos</a>
+            </section>
+        </div>
+
+        <section id="contacto" class="section-container">
+            <h2>Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Tomás Cotrina</h3>
+                    <p><i class="fas fa-briefcase"></i> Profesor de Turismo</p>
+                    <p><i class="fas fa-university"></i> Universidad César Vallejo - Tarapoto</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Tarapoto, San Martín, Perú</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:tuemail@ucv.edu.pe">tuemail@ucv.edu.pe</a></p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form">
+                    <h3>Envíame un mensaje</h3>
+                    <input type="text" id="name" name="name" placeholder="Tu Nombre" required>
+                    <input type="email" id="email" name="email" placeholder="Tu Email" required>
+                    <textarea name="message" id="message" rows="5" placeholder="Tu Mensaje" required></textarea>
+                    <button type="submit" class="cta-button">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tomás Cotrina. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
