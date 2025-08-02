@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Compra - Tomás Cotrina</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Estilos adicionales para la página de pago */
+        .payment-container {
+            max-width: 800px;
+            margin: 8rem auto 4rem auto;
+            padding: 2rem;
+            background-color: var(--card-bg-color);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .payment-header h1 {
+            font-family: var(--font-headings);
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .product-summary {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+        .product-summary img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .product-summary h2 {
+            font-family: var(--font-headings);
+            margin-bottom: 0.5rem;
+        }
+        .product-summary .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-left: auto;
+        }
+
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .method {
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        .method h3 {
+            font-family: var(--font-headings);
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .method .qr-code {
+            max-width: 150px;
+            margin: 0 auto;
+            display: block;
+        }
+        .method ul {
+            list-style: none;
+            padding: 0;
+            font-size: 0.9rem;
+        }
+        .method li {
+            margin-bottom: 0.5rem;
+        }
+        .method li strong {
+            color: var(--text-color);
+        }
+
+        .contact-footer {
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 1rem;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="payment-container">
+        <div class="payment-header">
+            <h1>Finalizar Compra</h1>
+        </div>
+
+        <div class="product-summary">
+            <img src="https://images.pexels.com/photos/103566/pexels-photo-103566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Tejido de Algodón Nativo">
+            <div>
+                <h2>Tejido de Algodón Nativo</h2>
+                <p>Manta tejida con tintes naturales de la región.</p>
+            </div>
+            <div class="price">$80.00</div>
+        </div>
+
+        <div class="payment-methods">
+            <div class="method">
+                <h3><i class="fas fa-qrcode"></i> Yape / Plin</h3>
+                <p>Escanea el código QR para pagar o usa el número de celular.</p>
+                <img src="https://i.ibb.co/GtnqL0p/qr-placeholder.png" alt="Código QR de Yape y Plin" class="qr-code">
+                <p style="text-align: center; font-weight: 700; font-size: 1.2rem; margin-top: 1rem;">987 654 321</p>
+            </div>
+
+            <div class="method">
+                <h3><i class="fas fa-university"></i> Cuentas Bancarias</h3>
+                <ul>
+                    <li><strong>Titular:</strong> Tomás Cotrina</li>
+                    <li><strong>BCP:</strong> 191-12345678-0-99</li>
+                    <li><strong>Interbank:</strong> 003-855-011234567890-55</li>
+                    <li><strong>BBVA:</strong> 0011-0330-0212345678</li>
+                    <li><strong>Banco de la Nación:</strong> 04-123-456789</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="contact-footer">
+            <p>Una vez realizado el pago, envía la constancia a nuestro correo <a href="mailto:tuemail@ucv.edu.pe">tuemail@ucv.edu.pe</a> o contáctanos para coordinar el envío.</p>
+            <a href="index.html" class="back-link">← Volver a la tienda</a>
+        </div>
+    </main>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // 1. Define la información de todos tus productos
+        const productos = {
+            // Productos originales
+            ceramica: {
+                nombre: 'Cerámica Shipibo',
+                precio: '$45.00',
+                imagen: 'https://images.pexels.com/photos/716107/pexels-photo-716107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            },
+            tejido: {
+                nombre: 'Tejido de Algodón Nativo',
+                precio: '$80.00',
+                imagen: 'https://images.pexels.com/photos/103566/pexels-photo-103566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            },
+            mascara: {
+                nombre: 'Máscara de Yanchama',
+                precio: '$120.00',
+                imagen: 'https://images.pexels.com/photos/265004/pexels-photo-265004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            },
+            // Nuevos productos
+            collar_huayruro: {
+                nombre: 'Collar de Huayruro',
+                precio: '$25.00',
+                imagen: 'https://images.pexels.com/photos/1129019/pexels-photo-1129019.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            },
+            cesta_tamshi: {
+                nombre: 'Cesta de Tamshi',
+                precio: '$55.00',
+                imagen: 'https://images.pexels.com/photos/2982423/pexels-photo-2982423.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            },
+            cerbatana: {
+                nombre: 'Cerbatana Decorativa',
+                precio: '$90.00',
+                imagen: 'https://images.pexels.com/photos/163443/war-horse-sculpture-wooden-figure-163443.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            },
+            manto_shipibo: {
+                nombre: 'Manto Ceremonial Shipibo',
+                precio: '$150.00',
+                imagen: 'https://images.pexels.com/photos/5029649/pexels-photo-5029649.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            },
+            hamaca: {
+                nombre: 'Hamaca de Chambira',
+                precio: '$200.00',
+                imagen: 'https://images.pexels.com/photos/103566/pexels-photo-103566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            },
+            mocahua: {
+                nombre: 'Mocahua de Arcilla',
+                precio: '$65.00',
+                imagen: 'https://images.pexels.com/photos/8995475/pexels-photo-8995475.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            },
+            pulsera_paiche: {
+                nombre: 'Pulsera de Paiche',
+                precio: '$30.00',
+                imagen: 'https://images.pexels.com/photos/1129019/pexels-photo-1129019.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            },
+            talla_delfin: {
+                nombre: 'Talla de Delfín Rosado',
+                precio: '$75.00',
+                imagen: 'https://images.pexels.com/photos/265004/pexels-photo-265004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            },
+            abanico: {
+                nombre: 'Abanico de Hoja de Palma',
+                precio: '$20.00',
+                imagen: 'https://images.pexels.com/photos/2982423/pexels-photo-2982423.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            },
+            plato_pucallpa: {
+                nombre: 'Plato Decorativo de Pucallpa',
+                precio: '$40.00',
+                imagen: 'https://images.pexels.com/photos/716107/pexels-photo-716107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            },
+            camino_mesa: {
+                nombre: 'Camino de Mesa Andino',
+                precio: '$110.00',
+                imagen: 'https://images.pexels.com/photos/5029649/pexels-photo-5029649.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            },
+            maracas: {
+                nombre: 'Maracas de Calabaza',
+                precio: '$35.00',
+                imagen: 'https://images.pexels.com/photos/163443/war-horse-sculpture-wooden-figure-163443.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            },
+            aretes_plumas: {
+                nombre: 'Aretes de Plumas de Loro',
+                precio: '$38.00',
+                imagen: 'https://images.pexels.com/photos/1129019/pexels-photo-1129019.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            }
+        };
+
+        // El resto del script no necesita cambios
+        const urlParams = new URLSearchParams(window.location.search);
+        const productoId = urlParams.get('producto');
+        const productoSeleccionado = productos[productoId] || productos.tejido;
+        const imagenElemento = document.querySelector('.product-summary img');
+        const nombreElemento = document.querySelector('.product-summary h2');
+        const precioElemento = document.querySelector('.product-summary .price');
+        
+        if (imagenElemento) imagenElemento.src = productoSeleccionado.imagen;
+        if (nombreElemento) nombreElemento.innerText = productoSeleccionado.nombre;
+        if (precioElemento) precioElemento.innerText = productoSeleccionado.precio;
+    });
+</script>
+</body>
+</html>

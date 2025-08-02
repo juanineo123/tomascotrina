@@ -1,43 +1,57 @@
 document.addEventListener('DOMContentLoaded', () => {
+    
+    //======================= CARRUSEL DE IMÁGENES DE FONDO =======================
+    const portada = document.getElementById('portada');
+    const backgroundImages = [
+    'url("imagenes/fondo1.jpg")',
+    'url("imagenes/fondo2.jpg")',
+    'url("imagenes/fondo3.jpg")',
+    'url("imagenes/fondo4.jpg")'
+];
+    let currentImageIndex = 0;
 
-    //======================= NUEVO SCRIPT DE DESPLAZAMIENTO SUAVE CORREGIDO =======================
-    // Este código reemplaza el anterior para asegurar que el menú fijo no tape las secciones.
+    setInterval(() => {
+        currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
+        // Se mantiene el degradado oscuro para la legibilidad del texto
+        portada.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), ${backgroundImages[currentImageIndex]}`;
+    }, 3000); // Cambia la imagen cada 3 segundos
 
+
+    //======================= SCRIPT DE DESPLAZAMIENTO SUAVE CORREGIDO =======================
     const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-    const header = document.querySelector('.header');
+const header = document.querySelector('.header');
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            // 1. Prevenimos el comportamiento por defecto del clic.
-            e.preventDefault();
+navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // Siempre prevenimos el comportamiento por defecto primero
 
-            // 2. Obtenemos el ID de la sección a la que queremos ir (ej. "#resenas").
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
+        const targetId = this.getAttribute('href');
 
-            if (targetElement) {
-                // 3. Obtenemos la altura del menú/header fijo.
-                const headerHeight = header.offsetHeight;
-                
-                // 4. Calculamos la posición real del elemento en la página.
-                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        // CASO ESPECIAL: Si es el botón de Inicio (href="#")
+        if (targetId === '#') {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            return; // Termina la función aquí
+        }
 
-                // 5. Calculamos la posición final a la que queremos desplazarnos.
-                //    Restamos la altura del menú y añadimos un pequeño espacio (20px) para que no quede pegado.
-                const offsetPosition = targetPosition - headerHeight - 20;
+        // Para todos los demás enlaces, usa la lógica que ya tenías
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            const headerHeight = header.offsetHeight;
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = targetPosition - headerHeight - 20;
 
-                // 6. Usamos window.scrollTo para desplazarnos a la posición calculada.
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
     });
-
+});
 
     //======================= ANIMACIÓN DE ENTRADA AL DESPLAZARSE =======================
-    // Esta parte sigue siendo la misma.
     const sections = document.querySelectorAll('.section-container');
 
     const observer = new IntersectionObserver(entries => {
@@ -55,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //======================= VALIDACIÓN DEL FORMULARIO DE CONTACTO =======================
-    // Esta parte sigue siendo la misma.
     const contactForm = document.getElementById('contact-form');
 
     contactForm.addEventListener('submit', (e) => {

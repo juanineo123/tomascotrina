@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOMÁS COTRINA - Arte y Turismo en Tarapoto</title>
-    
+    <link rel="preload" as="image" href="imagenes/fondo1.jpg">
+    <link rel="preload" as="image" href="imagenes/fondo2.jpg">
+    <link rel="preload" as="image" href="imagenes/fondo3.jpg">
+    <link rel="preload" as="image" href="imagenes/fondo4.jpg">
     <link rel="stylesheet" href="style.css">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
     <header class="header">
@@ -21,6 +28,7 @@
         </div>
         <nav class="navbar">
             <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
                 <li><a href="#artesania">Artesanía Machay</a></li>
                 <li><a href="#articulos">Artículos</a></li>
                 <li><a href="#resenas">Reseñas</a></li>
@@ -33,7 +41,15 @@
 
     <section id="portada">
         <div class="portada-content">
-            <h1>Arte, Cultura y Selva</h1>
+            <h1>
+                <span>A</span><span>r</span><span>t</span><span>e</span><span>,</span>
+                <span> </span>
+                <span>C</span><span>u</span><span>l</span><span>t</span><span>u</span><span>r</span><span>a</span>
+                <span> </span>
+                <span>y</span>
+                <span> </span>
+                <span>S</span><span>e</span><span>l</span><span>v</span><span>a</span>
+            </h1>
             <p>Explorando la Amazonía a través de la creatividad y el turismo.</p>
             <a href="#artesania" class="cta-button">Descubre mi Trabajo</a>
         </div>
@@ -44,27 +60,42 @@
             <h2>Artesanía Machay</h2>
             <p class="section-subtitle">Piezas únicas inspiradas en la magia de la selva.</p>
             <div class="grid-container">
+
                 <div class="card artesania-card">
-                    <img src="https://images.pexels.com/photos/716107/pexels-photo-716107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Artesanía de cerámica">
+                    <img src="https://images.pexels.com/photos/716107/pexels-photo-716107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Artesanía de cerámica">
                     <h3>Cerámica Shipibo</h3>
                     <p>Diseños geométricos que cuentan historias ancestrales. Hecho a mano.</p>
                     <span class="precio">$45.00</span>
-                    <button class="buy-button">Comprar</button>
+                    <a href="pago.html?producto=ceramica" class="buy-button" target="_blank"
+                        rel="noopener noreferrer">Comprar</a>
                 </div>
+
                 <div class="card artesania-card">
-                     <img src="https://images.pexels.com/photos/103566/pexels-photo-103566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Tejido artesanal">
+                    <img src="https://images.pexels.com/photos/103566/pexels-photo-103566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Tejido artesanal">
                     <h3>Tejido de Algodón Nativo</h3>
                     <p>Manta tejida con tintes naturales de la región. Suave y colorida.</p>
                     <span class="precio">$80.00</span>
-                    <button class="buy-button">Comprar</button>
+                    <a href="pago.html?producto=tejido" class="buy-button" target="_blank"
+                        rel="noopener noreferrer">Comprar</a>
                 </div>
+
                 <div class="card artesania-card">
-                     <img src="https://images.pexels.com/photos/265004/pexels-photo-265004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Talla de madera">
+                    <img src="https://images.pexels.com/photos/265004/pexels-photo-265004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Talla de madera">
                     <h3>Máscara de Yanchama</h3>
                     <p>Talla en madera de topa, representando un espíritu protector del bosque.</p>
                     <span class="precio">$120.00</span>
-                    <button class="buy-button">Comprar</button>
+                    <a href="pago.html?producto=mascara" class="buy-button" target="_blank"
+                        rel="noopener noreferrer">Comprar</a>
                 </div>
+                <a href="tienda.html" class="tienda-card-link">
+                    <div class="card tienda-card">
+                        <i class="fas fa-store"></i>
+                        <h3>Ver más en la Tienda</h3>
+                    </div>
+                </a>
             </div>
         </section>
 
@@ -72,27 +103,27 @@
             <section id="articulos" class="card">
                 <h3><i class="fas fa-feather-alt"></i> Artículos Semanales</h3>
                 <p>Reflexiones sobre turismo sostenible, cultura amazónica y nuevas tendencias.</p>
-                <a href="#" class="section-link">Leer más</a>
+                <a href="articulos.html" class="section-link">Leer más</a>
             </section>
             <section id="resenas" class="card">
                 <h3><i class="fas fa-utensils"></i> Reseñas Gastronómicas</h3>
                 <p>Un viaje por los sabores de Tarapoto y el Perú. Descubre dónde comer.</p>
-                <a href="#" class="section-link">Ver reseñas</a>
+                <a href="reseñas.html" class="section-link">Ver reseñas</a>
             </section>
             <section id="libros" class="card">
                 <h3><i class="fas fa-book-open"></i> Mis Libros</h3>
                 <p>Publicaciones y novelas donde la selva es la principal protagonista.</p>
-                <a href="#" class="section-link">Explorar libros</a>
+                <a href="libros.html" class="section-link">Explorar libros</a>
             </section>
             <section id="proyectos" class="card">
                 <h3><i class="fas fa-route"></i> Proyectos Turísticos</h3>
                 <p>Consultoría y desarrollo de experiencias turísticas auténticas y responsables.</p>
-                <a href="#" class="section-link">Conocer proyectos</a>
+                <a href="proyectos.html" class="section-link">Conocer proyectos</a>
             </section>
         </div>
 
         <section id="contacto" class="section-container">
-            <h2>Contacto</h2>
+            <h2>CONTACTO</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>Tomás Cotrina</h3>
@@ -123,4 +154,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
