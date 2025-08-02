@@ -423,3 +423,81 @@ footer {
     color: var(--primary-color);
     font-size: 1.5rem;
 }
+
+/* ======================================= */
+/* ESTILOS PARA DISPOSITIVOS MÓVILES       */
+/* ======================================= */
+@media (max-width: 768px) {
+
+    /* --- Ajustes Generales --- */
+    body {
+        font-size: 16px; /* Ajustamos el tamaño de fuente base para mejor legibilidad */
+    }
+
+    .section-container {
+        padding: 40px 20px; /* Reducimos el espaciado lateral en las secciones */
+    }
+
+    h2 {
+        font-size: 2rem; /* Hacemos los títulos principales un poco más pequeños */
+    }
+    
+    /* --- Header y Navegación --- */
+    .header {
+        flex-direction: column; /* El logo se pondrá encima del menú */
+        padding: 15px;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Los elementos del menú se apilan verticalmente */
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Añadimos espacio vertical entre los enlaces del menú */
+    }
+
+    /* --- Portada --- */
+    #portada {
+        padding: 0 20px; /* Reducimos el padding para que el texto no se corte */
+    }
+
+    #portada h1 {
+        font-size: 2.8rem; /* Hacemos el título principal más pequeño para que quepa */
+        line-height: 1.2;
+    }
+
+    #portada p {
+        font-size: 1rem;
+    }
+    
+    /* --- Rejilla de Artesanía --- */
+    .grid-container {
+        grid-template-columns: 1fr; /* Cambiamos la rejilla a una sola columna */
+        gap: 25px; /* Ajustamos el espacio entre las tarjetas */
+    }
+    
+    /* --- Secciones Adicionales (Artículos, Reseñas, etc.) --- */
+    .additional-sections {
+        flex-direction: column; /* Apilamos las tarjetas una sobre otra */
+        gap: 25px;
+        padding: 20px;
+    }
+
+    /* --- Sección de Contacto --- */
+    .contact-content {
+        flex-direction: column; /* Apilamos la info y el formulario */
+        gap: 40px; /* Damos más espacio entre la info y el formulario */
+    }
+
+    .contact-info, .contact-form {
+        text-align: center; /* Centramos el texto para una mejor apariencia */
+    }
+
+    .social-icons {
+        justify-content: center; /* Centramos los iconos de redes sociales */
+    }
+
+}
