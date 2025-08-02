@@ -84,7 +84,10 @@ body {
 .nav-links a:hover::after {
     width: 100%;
 }
-
+/* BOTÓN HAMBURGUESA OCULTO POR DEFECTO EN ESCRITORIO */
+.menu-toggle {
+    display: none;
+}
 /* =======================PORTADA PRINCIPAL======================= */
 #portada {
     height: 100vh;
@@ -423,81 +426,91 @@ footer {
     color: var(--primary-color);
     font-size: 1.5rem;
 }
-
-/* ======================================= */
-/* ESTILOS PARA DISPOSITIVOS MÓVILES       */
-/* ======================================= */
+/* ================================================= */
+/* === INICIA EL CÓDIGO AÑADIDO PARA MÓVILES === */
+/* ================================================= */
 @media (max-width: 768px) {
 
     /* --- Ajustes Generales --- */
-    body {
-        font-size: 16px; /* Ajustamos el tamaño de fuente base para mejor legibilidad */
+    h2 {
+        font-size: 2rem;
     }
 
     .section-container {
-        padding: 40px 20px; /* Reducimos el espaciado lateral en las secciones */
-    }
-
-    h2 {
-        font-size: 2rem; /* Hacemos los títulos principales un poco más pequeños */
-    }
-    
-    /* --- Header y Navegación --- */
-    .header {
-        flex-direction: column; /* El logo se pondrá encima del menú */
-        padding: 15px;
-        text-align: center;
-    }
-
-    .nav-links {
-        flex-direction: column; /* Los elementos del menú se apilan verticalmente */
-        margin-top: 15px;
-        width: 100%;
-    }
-
-    .nav-links li {
-        margin: 10px 0; /* Añadimos espacio vertical entre los enlaces del menú */
+        padding: 40px 20px;
     }
 
     /* --- Portada --- */
-    #portada {
-        padding: 0 20px; /* Reducimos el padding para que el texto no se corte */
-    }
-
     #portada h1 {
-        font-size: 2.8rem; /* Hacemos el título principal más pequeño para que quepa */
+        font-size: 2.8rem;
         line-height: 1.2;
     }
 
-    #portada p {
-        font-size: 1rem;
+    /* --- Header y Menú Hamburguesa --- */
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 25px;
+        position: relative; 
     }
-    
-    /* --- Rejilla de Artesanía --- */
-    .grid-container {
-        grid-template-columns: 1fr; /* Cambiamos la rejilla a una sola columna */
-        gap: 25px; /* Ajustamos el espacio entre las tarjetas */
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--primary-color);
+        font-size: 1.8rem;
+        cursor: pointer;
     }
-    
-    /* --- Secciones Adicionales (Artículos, Reseñas, etc.) --- */
+
+    .nav-links {
+        display: none; /* Ocultamos el menú por defecto */
+        position: absolute;
+        top: 100%; /* Justo debajo del header */
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(5px);
+        flex-direction: column;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        gap: 0; /* Reiniciamos el gap para móvil */
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex; /* Lo mostramos con JS */
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 1rem 0;
+        display: block;
+        width: 100%;
+        color: #333; /* Texto oscuro para buena lectura */
+    }
+
+    .nav-links a:hover {
+        background-color: #f0f0f0;
+        color: var(--accent-color);
+    }
+
+    .nav-links a::after {
+        display: none; /* Quitamos el efecto de subrayado en móvil */
+    }
+
+    /* --- Rejillas y Tarjetas --- */
+    .grid-container,
     .additional-sections {
-        flex-direction: column; /* Apilamos las tarjetas una sobre otra */
-        gap: 25px;
-        padding: 20px;
+        grid-template-columns: 1fr;
     }
 
-    /* --- Sección de Contacto --- */
+    /* --- Contacto --- */
     .contact-content {
-        flex-direction: column; /* Apilamos la info y el formulario */
-        gap: 40px; /* Damos más espacio entre la info y el formulario */
+        flex-direction: column;
     }
-
-    .contact-info, .contact-form {
-        text-align: center; /* Centramos el texto para una mejor apariencia */
-    }
-
-    .social-icons {
-        justify-content: center; /* Centramos los iconos de redes sociales */
-    }
-
 }
