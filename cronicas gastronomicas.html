@@ -2,15 +2,76 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Artículos - Tomás Cotrina</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crónicas Gastronómicas - Tomás Cotrina</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <main style="padding: 5rem;">
-        <h1>Mis Proyectos</h1>
-        <p>Aquí irá el contenido de mis proyectos</p>
-        <br>
-        <a href="index.html">← Volver a la página principal</a>
+
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">Tomás Cotrina</a>
+        </div>
+        <nav class="navbar">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="nav-links-menu">
+                <li><a href="index.html#portada">Inicio</a></li>
+                <li><a href="index.html#artesania">Artesanía</a></li>
+                <li><a href="productos orgánicos.html">Productos</a></li>
+                 <li class="dropdown">
+                    <a href="index.html#escritos">Cultura <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="articulos de turismo y cultura.html">Artículos</a></li>
+                        <li><a href="cronicas gastronomicas.html">Crónicas</a></li>
+                        <li><a href="libros.html">Libros</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="index.html#iniciativas">Proyectos <i class="fas fa-chevron-down"></i></a>
+                     <ul class="dropdown-content">
+                        <li><a href="proyectos.html">Proyectos Turísticos</a></li>
+                        <li><a href="voluntariado.html">Voluntariado</a></li>
+                        <li><a href="comunidad.html">Comunidad Nativa</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <article class="article-content">
+            <header class="article-header">
+                <h1>Secretos de la Patarashca: El Sabor del Río en una Hoja de Bijao</h1>
+                <p class="byline">Por Tomás Cotrina | 3 de agosto de 2025</p>
+            </header>
+            
+            <figure class="article-image-container">
+                <img src="https://images.pexels.com/photos/8438259/pexels-photo-8438259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Plato de Patarashca servido con yucas y ají de cocona">
+                <figcaption>La Patarashca es uno de los platos más emblemáticos y deliciosos de la gastronomía amazónica.</figcaption>
+            </figure>
+
+            <p>La cocina amazónica es un universo de técnicas ancestrales y productos únicos, y pocos platos la representan con tanta alma como la Patarashca. Lejos de ser una simple receta, es una ceremonia culinaria, un método de cocción que encapsula los aromas de la selva y el frescor del río en un solo bocado. Probar una auténtica Patarashca en Tarapoto es una experiencia que trasciende el paladar.</p>
+            
+            <h3>La Magia de la Hoja de Bijao</h3>
+            <p>El secreto del plato no reside en una olla o una sartén, sino en la humilde hoja de bijao. Esta hoja, grande y resistente, no es solo un envoltorio; es un ingrediente activo. Al ser calentada sobre la brasa, la hoja libera sus aceites y aromas, impregnando el pescado con un perfume herbáceo y ahumado inconfundible. Funciona como un horno en miniatura, cociendo el pescado lentamente en sus propios jugos y en los del aderezo, resultando en una carne increíblemente tierna y sabrosa.</p>
+
+            <h3>Un Plato que Cuenta Historias</h3>
+            <p>El relleno tradicional se prepara con pescados de río como el paiche, la gamitana o el dorado, sazonados con una mezcla de ají dulce, sacha culantro (cilantro salvaje), cebolla y tomate. Cada familia y cada restaurante en la región tiene su propia versión, su toque secreto. Algunos añaden yucas, otros un toque de leche de coco. Lo que nunca cambia es el ritual: el pescado aderezado se envuelve cuidadosamente en la hoja de bijao, se amarra y se coloca directamente sobre el fuego. El sonido chisporroteante y el humo aromático que emana anuncian que la magia está ocurriendo. Servida con plátanos asados y ají de cocona, la Patarashca es, sin duda, el sabor más auténtico de la selva peruana.</p>
+
+        </article>
     </main>
+    
+    <footer>
+        <p>© 2025 Tomás Cotrina. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

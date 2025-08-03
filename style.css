@@ -502,6 +502,201 @@ footer {
     text-align: center;
     padding: 2rem 0;
 }
+/* ========================================================================== */
+/* === ESTILOS PARA LAS PÁGINAS NUEVAS (TIENDAS, ARTÍCULOS, PROYECTOS) === */
+/* ========================================================================== */
+
+/* --- 1. Estilos para Secciones de Tienda (Productos, Vivero, Libros) --- */
+.shop-section {
+    padding: 4rem 5%;
+    background-color: var(--background-color);
+}
+
+.shop-title {
+    text-align: center;
+    font-family: var(--font-headings);
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.product-card {
+    background-color: var(--card-bg-color);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-family: var(--font-headings);
+    margin: 1.5rem 1.5rem 0.5rem 1.5rem;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+}
+
+.product-card p {
+    padding: 0 1.5rem;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.product-price {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin: 0 1.5rem 1rem 1.5rem;
+}
+
+
+/* --- 2. Estilos para Páginas de Artículo (Artículos, Crónicas, Voluntariado, Comunidad) --- */
+.page-container {
+    padding: 8rem 5% 4rem 5%;
+    max-width: 800px; /* Ancho ideal para lectura */
+    margin: 0 auto;
+}
+
+.article-header h1 {
+    font-family: var(--font-headings);
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+.byline {
+    font-style: italic;
+    color: #777;
+    margin: 0.5rem 0 2rem 0;
+}
+
+.article-image-container {
+    margin: 0 0 2rem 0;
+}
+
+.article-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.article-image-container figcaption {
+    font-size: 0.8rem;
+    text-align: center;
+    color: #777;
+    margin-top: 0.5rem;
+}
+
+.article-content h3 {
+    font-family: var(--font-headings);
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin: 2rem 0 1rem 0;
+}
+
+.article-content p, .article-content li {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.article-content ul {
+    list-style-position: inside;
+    padding-left: 1rem;
+}
+
+
+/* --- 3. Estilos para Página de Proyectos --- */
+.portfolio-section {
+    padding: 8rem 5% 4rem 5%;
+}
+
+.portfolio-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem auto;
+}
+
+.portfolio-header h1 {
+    font-family: var(--font-headings);
+    font-size: 2.8rem;
+    color: var(--primary-color);
+}
+
+.portfolio-header p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.projects-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.project-entry {
+    display: flex;
+    gap: 2rem;
+    background-color: var(--card-bg-color);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.project-image {
+    flex: 0 0 200px; /* Base de 200px, no crece, no se encoge */
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project-details h3 {
+    font-family: var(--font-headings);
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-status {
+    display: inline-block;
+    padding: 0.2rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.project-status.completado { background-color: #2C5F2D; } /* Verde oscuro */
+.project-status.en-curso { background-color: #F4A261; } /* Naranja */
+.project-status.planificacion { background-color: #BDBDBD; } /* Gris */
 
 /* Estilos para la tarjeta de enlace a la tienda */
 .tienda-card-link {
@@ -613,6 +808,7 @@ footer {
 
 @media (max-width: 768px) {
 
+
     /* --- Ajustes Generales --- */
     .section-container h2 {
         font-size: 2.5rem;
@@ -642,5 +838,12 @@ footer {
     /* --- Contacto --- */
     .contact-content {
         flex-direction: column;
+    }
+/* --- Ajustes para Proyectos en móvil --- */
+    .project-entry {
+        flex-direction: column; /* Apila la imagen y el texto */
+    }
+    .project-image {
+        flex-basis: 200px; /* Altura fija para la imagen en móvil */
     }
 }

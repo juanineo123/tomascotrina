@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         /* Estilos adicionales para la página de pago */
@@ -17,14 +20,16 @@
             padding: 2rem;
             background-color: var(--card-bg-color);
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
+
         .payment-header h1 {
             font-family: var(--font-headings);
             color: var(--primary-color);
             text-align: center;
             margin-bottom: 1rem;
         }
+
         .product-summary {
             display: flex;
             align-items: center;
@@ -33,16 +38,19 @@
             padding-bottom: 2rem;
             border-bottom: 1px solid #eee;
         }
+
         .product-summary img {
             width: 120px;
             height: 120px;
             object-fit: cover;
             border-radius: 10px;
         }
+
         .product-summary h2 {
             font-family: var(--font-headings);
             margin-bottom: 0.5rem;
         }
+
         .product-summary .price {
             font-size: 2rem;
             font-weight: 700;
@@ -55,11 +63,13 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
         }
+
         .method {
             padding: 1.5rem;
             border: 1px solid #ddd;
             border-radius: 10px;
         }
+
         .method h3 {
             font-family: var(--font-headings);
             color: var(--primary-color);
@@ -68,19 +78,23 @@
             align-items: center;
             gap: 0.5rem;
         }
+
         .method .qr-code {
             max-width: 150px;
             margin: 0 auto;
             display: block;
         }
+
         .method ul {
             list-style: none;
             padding: 0;
             font-size: 0.9rem;
         }
+
         .method li {
             margin-bottom: 0.5rem;
         }
+
         .method li strong {
             color: var(--text-color);
         }
@@ -90,6 +104,7 @@
             margin-top: 3rem;
             font-size: 1rem;
         }
+
         .back-link {
             display: inline-block;
             margin-top: 1rem;
@@ -107,27 +122,34 @@
                 margin: 1rem;
                 padding: 1.5rem;
             }
+
             .payment-header h1 {
-                font-size: 2rem; /* Hacemos el título más pequeño */
+                font-size: 2rem;
+                /* Hacemos el título más pequeño */
             }
 
             .product-summary {
-                flex-direction: column; /* Apilamos los elementos verticalmente */
+                flex-direction: column;
+                /* Apilamos los elementos verticalmente */
                 text-align: center;
                 gap: 1rem;
             }
+
             .product-summary .price {
-                margin-left: 0; /* Reseteamos el margen automático */
+                margin-left: 0;
+                /* Reseteamos el margen automático */
                 margin-top: 1rem;
                 font-size: 1.8rem;
             }
 
             .payment-methods {
-                gap: 1rem; /* Reducimos el espacio entre métodos de pago */
+                gap: 1rem;
+                /* Reducimos el espacio entre métodos de pago */
             }
         }
     </style>
 </head>
+
 <body>
 
     <main class="payment-container">
@@ -136,7 +158,8 @@
         </div>
 
         <div class="product-summary">
-            <img src="https://images.pexels.com/photos/103566/pexels-photo-103566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Tejido de Algodón Nativo">
+            <img src="https://images.pexels.com/photos/103566/pexels-photo-103566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Tejido de Algodón Nativo">
             <div>
                 <h2>Tejido de Algodón Nativo</h2>
                 <p>Manta tejida con tintes naturales de la región.</p>
@@ -163,112 +186,147 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="contact-footer">
-            <p>Una vez realizado el pago, envía la constancia a nuestro correo <a href="mailto:tuemail@ucv.edu.pe">tuemail@ucv.edu.pe</a> o contáctanos para coordinar el envío.</p>
+            <p>Una vez realizado el pago, envía la constancia a nuestro correo <a
+                    href="mailto:tuemail@ucv.edu.pe">tuemail@ucv.edu.pe</a> o contáctanos para coordinar el envío.</p>
             <a href="tienda.html" class="back-link">← Volver a la tienda</a>
         </div>
     </main>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // 1. Define la información de todos tus productos
-        const productos = {
-            // Productos originales
-            ceramica: {
-                nombre: 'Cerámica Shipibo',
-                precio: '$45.00',
-                imagen: 'https://images.pexels.com/photos/716107/pexels-photo-716107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-            },
-            tejido: {
-                nombre: 'Tejido de Algodón Nativo',
-                precio: '$80.00',
-                imagen: 'https://images.pexels.com/photos/103566/pexels-photo-103566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-            },
-            mascara: {
-                nombre: 'Máscara de Yanchama',
-                precio: '$120.00',
-                imagen: 'https://images.pexels.com/photos/265004/pexels-photo-265004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-            },
-            // Nuevos productos
-            collar_huayruro: {
-                nombre: 'Collar de Huayruro',
-                precio: '$25.00',
-                imagen: 'https://images.pexels.com/photos/1129019/pexels-photo-1129019.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-            },
-            cesta_tamshi: {
-                nombre: 'Cesta de Tamshi',
-                precio: '$55.00',
-                imagen: 'https://images.pexels.com/photos/2982423/pexels-photo-2982423.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-            },
-            cerbatana: {
-                nombre: 'Cerbatana Decorativa',
-                precio: '$90.00',
-                imagen: 'https://images.pexels.com/photos/163443/war-horse-sculpture-wooden-figure-163443.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-            },
-            manto_shipibo: {
-                nombre: 'Manto Ceremonial Shipibo',
-                precio: '$150.00',
-                imagen: 'https://images.pexels.com/photos/5029649/pexels-photo-5029649.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-            },
-            hamaca: {
-                nombre: 'Hamaca de Chambira',
-                precio: '$200.00',
-                imagen: 'https://images.pexels.com/photos/103566/pexels-photo-103566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-            },
-            mocahua: {
-                nombre: 'Mocahua de Arcilla',
-                precio: '$65.00',
-                imagen: 'https://images.pexels.com/photos/8995475/pexels-photo-8995475.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-            },
-            pulsera_paiche: {
-                nombre: 'Pulsera de Paiche',
-                precio: '$30.00',
-                imagen: 'https://images.pexels.com/photos/1129019/pexels-photo-1129019.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-            },
-            talla_delfin: {
-                nombre: 'Talla de Delfín Rosado',
-                precio: '$75.00',
-                imagen: 'https://images.pexels.com/photos/265004/pexels-photo-265004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-            },
-            abanico: {
-                nombre: 'Abanico de Hoja de Palma',
-                precio: '$20.00',
-                imagen: 'https://images.pexels.com/photos/2982423/pexels-photo-2982423.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-            },
-            plato_pucallpa: {
-                nombre: 'Plato Decorativo de Pucallpa',
-                precio: '$40.00',
-                imagen: 'https://images.pexels.com/photos/716107/pexels-photo-716107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-            },
-            camino_mesa: {
-                nombre: 'Camino de Mesa Andino',
-                precio: '$110.00',
-                imagen: 'https://images.pexels.com/photos/5029649/pexels-photo-5029649.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-            },
-            maracas: {
-                nombre: 'Maracas de Calabaza',
-                precio: '$35.00',
-                imagen: 'https://images.pexels.com/photos/163443/war-horse-sculpture-wooden-figure-163443.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-            },
-            aretes_plumas: {
-                nombre: 'Aretes de Plumas de Loro',
-                precio: '$38.00',
-                imagen: 'https://images.pexels.com/photos/1129019/pexels-photo-1129019.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-            }
-        };
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Define la información de todos tus productos
+            const productos = {
+                // Productos originales
+                ceramica: {
+                    nombre: 'Cerámica Shipibo',
+                    precio: '$45.00',
+                    imagen: 'https://images.pexels.com/photos/716107/pexels-photo-716107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                },
+                tejido: {
+                    nombre: 'Tejido de Algodón Nativo',
+                    precio: '$80.00',
+                    imagen: 'https://images.pexels.com/photos/103566/pexels-photo-103566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                },
+                mascara: {
+                    nombre: 'Máscara de Yanchama',
+                    precio: '$120.00',
+                    imagen: 'https://images.pexels.com/photos/265004/pexels-photo-265004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                },
+                // Nuevos productos
+                collar_huayruro: {
+                    nombre: 'Collar de Huayruro',
+                    precio: '$25.00',
+                    imagen: 'https://images.pexels.com/photos/1129019/pexels-photo-1129019.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                },
+                cesta_tamshi: {
+                    nombre: 'Cesta de Tamshi',
+                    precio: '$55.00',
+                    imagen: 'https://images.pexels.com/photos/2982423/pexels-photo-2982423.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                },
+                cerbatana: {
+                    nombre: 'Cerbatana Decorativa',
+                    precio: '$90.00',
+                    imagen: 'https://images.pexels.com/photos/163443/war-horse-sculpture-wooden-figure-163443.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                },
+                manto_shipibo: {
+                    nombre: 'Manto Ceremonial Shipibo',
+                    precio: '$150.00',
+                    imagen: 'https://images.pexels.com/photos/5029649/pexels-photo-5029649.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                },
+                hamaca: {
+                    nombre: 'Hamaca de Chambira',
+                    precio: '$200.00',
+                    imagen: 'https://images.pexels.com/photos/103566/pexels-photo-103566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                },
+                mocahua: {
+                    nombre: 'Mocahua de Arcilla',
+                    precio: '$65.00',
+                    imagen: 'https://images.pexels.com/photos/8995475/pexels-photo-8995475.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                },
+                pulsera_paiche: {
+                    nombre: 'Pulsera de Paiche',
+                    precio: '$30.00',
+                    imagen: 'https://images.pexels.com/photos/1129019/pexels-photo-1129019.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                },
+                talla_delfin: {
+                    nombre: 'Talla de Delfín Rosado',
+                    precio: '$75.00',
+                    imagen: 'https://images.pexels.com/photos/265004/pexels-photo-265004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                },
+                abanico: {
+                    nombre: 'Abanico de Hoja de Palma',
+                    precio: '$20.00',
+                    imagen: 'https://images.pexels.com/photos/2982423/pexels-photo-2982423.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                },
+                plato_pucallpa: {
+                    nombre: 'Plato Decorativo de Pucallpa',
+                    precio: '$40.00',
+                    imagen: 'https://images.pexels.com/photos/716107/pexels-photo-716107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                },
+                camino_mesa: {
+                    nombre: 'Camino de Mesa Andino',
+                    precio: '$110.00',
+                    imagen: 'https://images.pexels.com/photos/5029649/pexels-photo-5029649.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                },
+                maracas: {
+                    nombre: 'Maracas de Calabaza',
+                    precio: '$35.00',
+                    imagen: 'https://images.pexels.com/photos/163443/war-horse-sculpture-wooden-figure-163443.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                },
+                aretes_plumas: {
+                    nombre: 'Aretes de Plumas de Loro',
+                    precio: '$38.00',
+                    imagen: 'https://images.pexels.com/photos/1129019/pexels-photo-1129019.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                }
+            // Productos de la sección "Productos Orgánicos"
+        cafe_organico: {
+                    nombre: 'Café de Altura Orgánico',
+                    precio: '$15.00',
+                    imagen: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                },
+                cacao_puro: {
+                    nombre: 'Cacao Puro Amazónico',
+                    precio: '$12.00',
+                    imagen: 'https://images.pexels.com/photos/4110101/pexels-photo-4110101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                },
+                aceite_sacha_inchi: {
+                    nombre: 'Aceite de Sacha Inchi',
+                    precio: '$20.00',
+                    imagen: 'https://images.pexels.com/photos/8951499/pexels-photo-8951499.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                },
 
-        // El resto del script no necesita cambios
-        const urlParams = new URLSearchParams(window.location.search);
-        const productoId = urlParams.get('producto');
-        const productoSeleccionado = productos[productoId] || productos.tejido;
-        const imagenElemento = document.querySelector('.product-summary img');
-        const nombreElemento = document.querySelector('.product-summary h2');
-        const precioElemento = document.querySelector('.product-summary .price');
-        
-        if (imagenElemento) imagenElemento.src = productoSeleccionado.imagen;
-        if (nombreElemento) nombreElemento.innerText = productoSeleccionado.nombre;
-        if (precioElemento) precioElemento.innerText = productoSeleccionado.precio;
-    });
-</script>
+                // Productos de la sección "Mis Libros"
+                libro_misterios_mayo: {
+                    nombre: 'Misterios del Alto Mayo',
+                    precio: '$18.00',
+                    imagen: 'https://images.pexels.com/photos/2228580/pexels-photo-2228580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                },
+                libro_sabor_paiche: {
+                    nombre: 'El Sabor del Paiche',
+                    precio: '$22.00',
+                    imagen: 'https://images.pexels.com/photos/3747505/pexels-photo-3747505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                },
+                libro_rutas_sostenibles: {
+                    nombre: 'Rutas Sostenibles: San Martín',
+                    precio: '$25.00',
+                    imagen: 'https://images.pexels.com/photos/159866/books-book-pages-read-literature-159866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                },
+            };
+
+            // El resto del script no necesita cambios
+            const urlParams = new URLSearchParams(window.location.search);
+            const productoId = urlParams.get('producto');
+            const productoSeleccionado = productos[productoId] || productos.tejido;
+            const imagenElemento = document.querySelector('.product-summary img');
+            const nombreElemento = document.querySelector('.product-summary h2');
+            const precioElemento = document.querySelector('.product-summary .price');
+
+            if (imagenElemento) imagenElemento.src = productoSeleccionado.imagen;
+            if (nombreElemento) nombreElemento.innerText = productoSeleccionado.nombre;
+            if (precioElemento) precioElemento.innerText = productoSeleccionado.precio;
+        });
+    </script>
 </body>
+
 </html>

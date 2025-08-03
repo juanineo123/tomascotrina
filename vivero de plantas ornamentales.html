@@ -2,15 +2,86 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Artículos - Tomás Cotrina</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivero de Plantas Ornamentales - Tomás Cotrina</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <main style="padding: 5rem;">
-        <h1>Nuestras Reseñas</h1>
-        <p>Aquí irá el contenido de mis Reseñas</p>
-        <br>
-        <a href="index.html">← Volver a la página principal</a>
+
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">Tomás Cotrina</a>
+        </div>
+        <nav class="navbar">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="nav-links-menu">
+                <li><a href="index.html#portada">Inicio</a></li>
+                <li><a href="index.html#artesania">Artesanía</a></li>
+                <li><a href="productos orgánicos.html">Productos</a></li>
+                 <li class="dropdown">
+                    <a href="index.html#escritos">Cultura <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="articulos de turismo y cultura.html">Artículos</a></li>
+                        <li><a href="cronicas gastronomicas.html">Crónicas</a></li>
+                        <li><a href="libros.html">Libros</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="index.html#iniciativas">Proyectos <i class="fas fa-chevron-down"></i></a>
+                     <ul class="dropdown-content">
+                        <li><a href="proyectos.html">Proyectos Turísticos</a></li>
+                        <li><a href="voluntariado.html">Voluntariado</a></li>
+                        <li><a href="comunidad.html">Comunidad Nativa</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="tienda-vivero" class="shop-section" style="padding-top: 8rem;">
+            <h2 class="shop-title">Vivero de Plantas Ornamentales</h2>
+            <div class="product-grid">
+
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/1878346/pexels-photo-1878346.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Orquídea Phalaenopsis">
+                    <h3>Orquídea Phalaenopsis</h3>
+                    <p>Conocida como orquídea mariposa, de fácil cuidado y floración duradera.</p>
+                    <span class="product-price">$25.00</span>
+                    <a href="pago.html?producto=orquidea_phalaenopsis" target="_blank" class="buy-button">Comprar</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/793012/pexels-photo-793012.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Bromelia Guzmania">
+                    <h3>Bromelia Guzmania</h3>
+                    <p>Planta tropical exótica que añade un toque de color vibrante a cualquier espacio.</p>
+                    <span class="product-price">$18.00</span>
+                    <a href="pago.html?producto=bromelia_guzmania" target="_blank" class="buy-button">Comprar</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/1084542/pexels-photo-1084542.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Helecho Amazónico">
+                    <h3>Helecho Amazónico</h3>
+                    <p>Frondoso y elegante, perfecto para interiores con buena humedad ambiental.</p>
+                    <span class="product-price">$14.00</span>
+                    <a href="pago.html?producto=helecho_amazonico" target="_blank" class="buy-button">Comprar</a>
+                </div>
+                
+                </div>
+        </section>
     </main>
+    
+    <footer>
+        <p>© 2025 Tomás Cotrina. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
