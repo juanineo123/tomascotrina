@@ -31,12 +31,25 @@
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links" id="nav-links-menu">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#artesania">Artesanía Machay</a></li>
-                <li><a href="#articulos">Artículos</a></li>
-                <li><a href="#resenas">Reseñas</a></li>
-                <li><a href="#libros">Libros</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#portada">Inicio</a></li>
+                <li><a href="#artesania">Artesanía</a></li>
+                <li><a href="#productos-organicos">Productos</a></li>
+                <li class="dropdown">
+                    <a href="#escritos">Cultura <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="#articulos">Artículos</a></li>
+                        <li><a href="#cronicas">Crónicas</a></li>
+                        <li><a href="#libros">Libros</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#iniciativas">Proyectos <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="#proyectos-turisticos">Proyectos Turísticos</a></li>
+                        <li><a href="#voluntariado">Voluntariado</a></li>
+                        <li><a href="#comunidad-shamboyacu">Comunidad Nativa</a></li>
+                    </ul>
+                </li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
@@ -60,7 +73,7 @@
 
     <main>
         <section id="artesania" class="section-container">
-            <h2>Artesanía Machay</h2>
+            <h2>Artesanía Amachay</h2>
             <p class="section-subtitle">Piezas únicas inspiradas en la magia de la selva.</p>
             <div class="grid-container">
 
@@ -102,42 +115,104 @@
             </div>
         </section>
 
-        <div class="additional-sections">
-            <section id="articulos" class="card">
-                <h3><i class="fas fa-feather-alt"></i> Artículos Semanales</h3>
-                <p>Reflexiones sobre turismo sostenible, cultura amazónica y nuevas tendencias.</p>
-                <a href="articulos.html" class="section-link">Leer más</a>
-            </section>
-            <section id="resenas" class="card">
-                <h3><i class="fas fa-utensils"></i> Reseñas Gastronómicas</h3>
-                <p>Un viaje por los sabores de Tarapoto y el Perú. Descubre dónde comer.</p>
-                <a href="reseñas.html" class="section-link">Ver reseñas</a>
-            </section>
-            <section id="libros" class="card">
-                <h3><i class="fas fa-book-open"></i> Mis Libros</h3>
-                <p>Publicaciones y novelas donde la selva es la principal protagonista.</p>
-                <a href="libros.html" class="section-link">Explorar libros</a>
-            </section>
-            <section id="proyectos" class="card">
-                <h3><i class="fas fa-route"></i> Proyectos Turísticos</h3>
-                <p>Consultoría y desarrollo de experiencias turísticas auténticas y responsables.</p>
-                <a href="proyectos.html" class="section-link">Conocer proyectos</a>
-            </section>
-        </div>
+        <div class="sections-wrapper">
 
+            <section id="productos-organicos" class="section-group">
+                <h3 class="group-title">Nuestros Productos</h3>
+                <div class="grid-container-new">
+                    <div class="card new-card">
+                        <i class="fas fa-leaf"></i>
+                        <h4>Productos Orgánicos</h4>
+                        <p>Café, cacao y frutos exóticos cosechados de manera sostenible en la región.</p>
+                        <a href="productos orgánicos.html" class="section-link">Ver más</a>
+                    </div>
+                    <div id="vivero" class="card new-card">
+                        <i class="fas fa-seedling"></i>
+                        <h4>Vivero de Plantas Ornamentales</h4>
+                        <p>Orquídeas, bromelias y otras especies nativas para embellecer tu hogar.</p>
+                        <a href="vivero de plantas ornamentales.html" class="section-link">Explorar vivero</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="escritos" class="section-group">
+                <h3 class="group-title">Escritos y Relatos</h3>
+                <div class="grid-container-new">
+                    <div id="articulos" class="card new-card">
+                        <i class="fas fa-feather-alt"></i>
+                        <h4>Artículos de Turismo y Cultura</h4>
+                        <p>Reflexiones sobre el turismo, la cultura amazónica y las nuevas tendencias.</p>
+                        <a href="articulos de turismo y cultura.html" class="section-link">Leer artículos</a>
+                    </div>
+                    <div id="cronicas" class="card new-card">
+                        <i class="fas fa-utensils"></i>
+                        <h4>Crónicas Gastronómicas</h4>
+                        <p>Un viaje por los sabores de Tarapoto y el Perú. Descubre dónde comer.</p>
+                        <a href="cronicas gastronomicas.html" class="section-link">Ver crónicas</a>
+                    </div>
+                    <div id="libros" class="card new-card">
+                        <i class="fas fa-book-open"></i>
+                        <h4>Mis Libros</h4>
+                        <p>Publicaciones y novelas donde la selva es la principal protagonista.</p>
+                        <a href="libros.html" class="section-link">Explorar libros</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="iniciativas" class="section-group">
+                <h3 class="group-title">Iniciativas y Proyectos</h3>
+                <div class="grid-container-new">
+                    <div id="proyectos-turisticos" class="card new-card">
+                        <i class="fas fa-route"></i>
+                        <h4>Proyectos Turísticos y Culturales</h4>
+                        <p>Consultoría y desarrollo de experiencias turísticas auténticas y responsables.</p>
+                        <a href="proyectos.html" class="section-link">Conocer proyectos</a>
+                    </div>
+                    <div id="voluntariado" class="card new-card">
+                        <i class="fas fa-hands-helping"></i>
+                        <h4>Voluntariado y Conservación</h4>
+                        <p>Únete a nuestros esfuerzos para proteger la biodiversidad de la Amazonía.</p>
+                        <a href="voluntariado.html" class="section-link">Participar</a>
+                    </div>
+                    <div id="comunidad-shamboyacu" class="card new-card">
+                        <i class="fas fa-users"></i>
+                        <h4>Comunidad Nativa Alto Shamboyacu</h4>
+                        <p>Proyectos de colaboración y turismo vivencial con la comunidad Kichwa.</p>
+                        <a href="comunidad.html" class="section-link">Saber más</a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
         <section id="contacto" class="section-container">
             <h2>CONTACTO</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Tomás Cotrina</h3>
+                    <h3>Tomás Cotrina Trigoso</h3>
+                    <p class="contact-description">Docente Universitario; consultor en Proyectos Culturales y Turísticos
+                        en la Amazonia, Gestor Cultural en la región San Martín; es columnista en la Revista el
+                        Tarapotino y diarios en la Región San Martín; es miembro de la Asociación Nacional de
+                        Periodistas del Perú – ANP, activista social en bien de la naturaleza y la conservación de las
+                        culturas amazónicas.</p>
                     <p><i class="fas fa-briefcase"></i> Profesor de Turismo</p>
                     <p><i class="fas fa-university"></i> Universidad César Vallejo - Tarapoto</p>
                     <p><i class="fas fa-map-marker-alt"></i> Tarapoto, San Martín, Perú</p>
                     <p><i class="fas fa-envelope"></i> <a href="mailto:tuemail@ucv.edu.pe">tuemail@ucv.edu.pe</a></p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/51942402010" target="_blank"
+                            rel="noopener noreferrer">+51 942 402 010</a></p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/tomas-cotrina-trigozo-4950b3353/" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/tomascotrinatrigozo?igsh=YzljYTk1ODg3Zg%3D%3D"
+                                target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/share/1AcYeEnpjU/" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
+                            <a href="https://www.youtube.com/watch?v=TeL4hzxy8c0" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                            <a href="http://tiktok.com/@tomas.cotrina.trig" target="_blank" rel="noopener noreferrer"><i
+                                    class="fab fa-tiktok"></i></a>
+                        </div>
                     </div>
                 </div>
                 <form id="contact-form" class="contact-form">

@@ -97,6 +97,35 @@
             text-decoration: none;
             font-weight: 700;
         }
+
+        /* ================================================= */
+        /* === CÓDIGO AÑADIDO PARA SOPORTE MÓVIL === */
+        /* ================================================= */
+        @media (max-width: 768px) {
+            .payment-container {
+                /* Reducimos márgenes y padding en móvil */
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+            .payment-header h1 {
+                font-size: 2rem; /* Hacemos el título más pequeño */
+            }
+
+            .product-summary {
+                flex-direction: column; /* Apilamos los elementos verticalmente */
+                text-align: center;
+                gap: 1rem;
+            }
+            .product-summary .price {
+                margin-left: 0; /* Reseteamos el margen automático */
+                margin-top: 1rem;
+                font-size: 1.8rem;
+            }
+
+            .payment-methods {
+                gap: 1rem; /* Reducimos el espacio entre métodos de pago */
+            }
+        }
     </style>
 </head>
 <body>
@@ -137,7 +166,7 @@
         
         <div class="contact-footer">
             <p>Una vez realizado el pago, envía la constancia a nuestro correo <a href="mailto:tuemail@ucv.edu.pe">tuemail@ucv.edu.pe</a> o contáctanos para coordinar el envío.</p>
-            <a href="index.html" class="back-link">← Volver a la tienda</a>
+            <a href="tienda.html" class="back-link">← Volver a la tienda</a>
         </div>
     </main>
 <script>
